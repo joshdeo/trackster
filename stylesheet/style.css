@@ -48,11 +48,14 @@ input {
 .second {
     padding-left: 10rem;
     padding-top: 1rem;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
   }
 
   #output {
       margin-top: 2rem;
+      color: white;
   }
 
   #playbtn {

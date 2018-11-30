@@ -26,27 +26,27 @@ $(document).ready(function () {
             var track = tracks[trackIndex];
             var mediumAlbumArt = track.image[1]["#text"];
             var trackInfo =
-            '<div class="row">' +
-            '<div class="col-md-1" id="playbtn">' + 
-            '<a href="'+ track.url + '" target="_blank">' +
-            '<i class="fa fa-play-circle-o fa-2x" id="playbtn"></i>' +
-            '</a>' + 
-            '</div>' + 
-            '  <div class="col-xs-4">' + track.name + '</div>' +
-            '  <div class="col-xs-2">' + track.artist + '</div>' +
-            '  <div class="col-xs-2"><img src="' + mediumAlbumArt + '"/></div>' +
-            '  <div class="col-xs-2">' + track.listeners + '</div>' +
-            '</div>';
+                '<div class="row">' +
+                '<div class="col-xs-2" id="playbtn">' +
+                '<a href="' + track.url + '" target="_blank">' +
+                '<i class="fa fa-play-circle-o fa-2x" id="playbtn"></i>' +
+                '</a>' +
+                '</div>' +
+                '  <div class="col-xs-4">' + track.name + '</div>' +
+                '  <div class="col-xs-2">' + track.artist + '</div>' +
+                '  <div class="col-xs-2"><img src="' + mediumAlbumArt + '"/></div>' +
+                '  <div class="col-xs-1">' + track.listeners + '</div>' +
+                '</div>';
             $trackList.append(trackInfo);
         };
     };
-    $(".input").keyup(function(event) {
+    $(".input").keyup(function (event) {
         if (event.keyCode === 13) {
             $("#search-button").click();
         }
     });
-
 });
+
 
 const API_KEY = '7311f8e2bafc24ad3cae436fd7a59b8b';
 console.log(API_KEY);
